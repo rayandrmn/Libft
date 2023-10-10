@@ -6,7 +6,7 @@
 /*   By: rayandrmn <rayandrmn@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:07:50 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/09 10:57:09 by rayandrmn        ###   ########.fr       */
+/*   Updated: 2023/10/09 11:40:44 by rayandrmn        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int	ft_isprint(int c);
 void    *ft_memset(void *s, int c, unsigned int len);
 size_t  ft_strlen(const char *str);
 void    ft_bzero(void *s, size_t n);
+void    *ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif
