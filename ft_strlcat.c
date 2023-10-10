@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rayderha <rayandrmn@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rayderha <marvin@42.fr@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 17:50:12 by rayderha         #+#    #+#             */
 /*   Updated: 2023/10/10 17:50:12 by rayderha        ###   ########.fr       */
