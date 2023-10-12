@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:12:13 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/12 10:54:44 by rayderha         ###   ########.fr       */
+/*   Updated: 2023/10/12 11:17:18 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t nbr, size_t n)
 	while (nbr)
 	{
 		tab[i] = '\0';
-		tab[i++];
+		i++;
 		nbr--;
 	}
 	return (tab);

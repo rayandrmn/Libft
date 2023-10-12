@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:19:45 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/11 15:25:58 by rayderha         ###   ########.fr       */
+/*   Updated: 2023/10/12 11:15:14 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	size_t	i;
 	size_t	len;
 
 	i = 0;

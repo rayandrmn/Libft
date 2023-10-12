@@ -16,6 +16,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <strings.h>
+#include <stdlib.h>
 
 void	ft_putstr(char *str)
 {
@@ -31,14 +32,24 @@ void	ft_putstr(char *str)
 
 int	main(void)
 {
-	char string[50] = "bonjour";
-	char stringdeux[] = "a toi jeune homme";
+	char string[50] = "b";
+	char stringdeux[] = " a toi jeune homme";
 	char stringtrois[50] = "bonjour";
+	char grostest[] = "il y ab le mot bonjour ou pas";
 	char stringquatre[] = "a toi jeune homme";
-	ft_memcpy(stringtrois, stringquatre, 18);
-	printf("%s", stringtrois);
+	//printf("%zu", ft_strlcat(string, stringdeux, 50));
+	const char stringcinq[] = "aPpasreussilloPreussi";
+	int	c = 'P';
+	char *allo = (char *)ft_calloc(10, 1);
+	printf("%s\n", allo);
+//	printf("%d\n", atoi("42"));
+	//printf("%s\n", ft_memchr(stringcinq, c, 7));
+	//printf("%s", memchr(stringcinq, c, 7));
+
+	//printf("%s", stringtrois);
 	printf("\n");
-	memcpy(stringtrois, stringquatre, 18);
-	printf("%s", stringtrois);
+	//memcpy(stringtrois, stringquatre, 18);
+	//printf("%s", stringtrois);
+
 	return (0);
 }

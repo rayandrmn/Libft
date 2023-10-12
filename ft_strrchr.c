@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 18:48:58 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/10 18:51:56 by rayderha         ###   ########.fr       */
+/*   Updated: 2023/10/12 15:16:08 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ char	*ft_strrchr(const char *s, int c)
 		i++;
 		s++;
 	}
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (*s == c)
 			return ((char *)s);
 		s--;
 		i--;
 	}
-	return (0);
+	return (NULL);
 }

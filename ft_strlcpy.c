@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 16:49:08 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/12 10:55:32 by rayderha         ###   ########.fr       */
+/*   Updated: 2023/10/12 12:25:20 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	i = 0;
 	if (dst == 0 || src == 0)
 		return (0);
-	while (src[i] && i < (size - 1))
+	if (size > 0)
 	{
-		dst[i] = src[i];
-		i++;
+		while (src[i] && i < (size - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
 	}
+
 	return (sizesrc);
 }
