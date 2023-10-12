@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 11:19:45 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/12 11:15:14 by rayderha         ###   ########.fr       */
+/*   Updated: 2023/10/12 17:12:32 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,20 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	i;
 	size_t	len;
 
-	i = 0;
 	len = ft_strlen(s2);
-	if (*s1 == 0 || *s2 == 0)
+	if (len == 0)
 		return ((char *)s1);
-	while (*s1 && n-- > 0)
+	while (*s1 && n >= len)
 	{
-		if (*s1 == *s2)
+		i = 0;
+		while (s1[i] == s2[i])
 		{
-			while (*s1)
-			{
-				if (i == (len - 1))
-					return ((char *)s1);
-				if (*s1 != s2[i++])
-					break ;
-				s1++;
-			}
+			if (i == len - 1)
+				return ((char *)s1);
+			i++;
 		}
 		s1++;
+		n--;
 	}
-	return ((void *)0);
+	return (NULL);
 }
