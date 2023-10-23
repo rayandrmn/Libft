@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rayderha <rayderha@student.42.fr>        +#+  +:+       +#+        */
+/*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:07:50 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/10 11:02:08 by rayderha        ###   ########.fr       */
+/*   Updated: 2023/10/23 16:06:04 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *str);
 void	*ft_calloc(size_t nbr, size_t n);
 char	*ft_strdup(const char *s);
-char 	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 
 #endif
