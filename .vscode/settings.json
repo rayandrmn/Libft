@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"stddef.h": "c",
-		"ft_strncmp.C": "cpp"
+		"ft_strncmp.C": "cpp",
+		"ft_itoa.C": "cpp"
 	}
 }
