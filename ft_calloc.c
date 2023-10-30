@@ -15,18 +15,11 @@
 
 void	*ft_calloc(size_t nbr, size_t n)
 {
-	int					i;
-	unsigned char		*tab;
+	void	*tab;
 
-	i = 0;
-	tab = malloc(n * nbr);
+	tab = (void *)malloc(n * nbr);
 	if (!tab)
-		return (tab);
-	while (nbr)
-	{
-		tab[i] = '\0';
-		i++;
-		nbr--;
-	}
+		return (NULL);
+	ft_bzero(tab, n * nbr);
 	return (tab);
 }

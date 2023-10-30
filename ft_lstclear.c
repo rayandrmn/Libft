@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 14:54:45 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/27 16:00:24 by rayderha         ###   ########.fr       */
+/*   Updated: 2023/10/30 15:44:49 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		{
 			list = (*lst)->next;
 			ft_lstdelone(*lst, (*del));
-			*lst = (*lst)->next;
+			*lst = list;
 		}
+		*lst = NULL;
 	}
 }
