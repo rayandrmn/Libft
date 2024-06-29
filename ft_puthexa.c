@@ -1,55 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.C                                          :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/23 16:26:58 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/24 19:52:40 by rayderha         ###   ########.fr       */
+/*   Created: 2024/02/03 17:41:51 by rayderha          #+#    #+#             */
+/*   Updated: 2024/06/15 13:20:47 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	malloc_size_itoa(int n)
+int	ft_puthexa(unsigned int n, char *base)
 {
-	size_t	i;
+	char	*tab;
+	int		ct;
+	int		i;
 
 	i = 0;
+	ct = 0;
 	if (n == 0)
-		return (1);
-	while (n != 0)
 	{
-		n /= 10;
-		i++;
+		ct += ft_putchar('0');
+		return (ct);
 	}
-	return (i);
-}
-
-char	*ft_itoa(int n)
-{
-	char		*tab;
-	size_t		size;
-	long int	num;
-
-	num = n;
-	size = malloc_size_itoa(n);
-	if (n < 0)
+	tab = malloc(sizeof(char) * 16 + 1);
+	while (n > 0)
 	{
-		num *= -1;
-		size++;
+		tab[i++] = base[n % 16];
+		n /= 16;
 	}
-	tab = (char *)malloc(sizeof(char) * (size + 1));
-	if (!tab)
-		return (NULL);
-	tab[size] = '\0';
-	while (size--)
+	i--;
+	while (i >= 0)
 	{
-		tab[size] = num % 10 + '0';
-		num = num / 10;
+		ct += ft_putchar(tab[i--]);
 	}
-	if (n < 0)
-		tab[0] = '-';
-	return (tab);
+	free(tab);
+	return (ct);
 }

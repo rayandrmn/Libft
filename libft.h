@@ -6,7 +6,7 @@
 /*   By: rayderha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:07:50 by rayderha          #+#    #+#             */
-/*   Updated: 2023/10/27 15:27:40 by rayderha         ###   ########.fr       */
+/*   Updated: 2024/06/14 16:08:45 by rayderha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,22 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+
+# endif
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct m_list
+{
+	char			*current;
+	struct m_list	*next;
+}	t_lstr;
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -68,4 +79,24 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
+t_lstr	*ft_lst_get_last(t_lstr *pile);
+
+char	*get_next_line(int fd);
+char	*get_next_line(int fd);
+void	read_buff_pile(t_lstr **pile, int fd);
+void	get_line(t_lstr *pile, char *line);
+void	clean_list(t_lstr **pile);
+void	newnode(t_lstr **pile, char *current, int len);
+void	freealllist(t_lstr *pile);
+
+int		newline(t_lstr *pile);
+int		size_line(t_lstr *pile);
+int		ft_printf(const char *str, ...);
+int		ft_putstr(const char *str);
+int		ft_putchar(char c);
+int		ft_itoaprintf(long long unsigned int n, char *base);
+int		ft_putnbr_base(int n, int base);
+int		malloc_size(int n);
+int		ft_puthexa(unsigned int n, char *base);
+int		ft_putnbr_unsigned(unsigned int n, unsigned int base);
 #endif
